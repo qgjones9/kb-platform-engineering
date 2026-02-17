@@ -12,6 +12,9 @@
   "git.verboseCommit": false,
   "git.pollInterval": 1000,
   "git.autoRefresh": true,
+  "git.allowNoVerifyCommit": false,
+  "git.allowForcePush": false,
+  "git.allowUnsafeRepositories": true,
   "files.watcherExclude": {
     "**/.git/objects/**": false,
     "**/.git/subtree-cache/**": false

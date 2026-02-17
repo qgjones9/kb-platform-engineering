@@ -4,5 +4,8 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.autoRepositoryDetection": true,
-  "git.detectSubmodules": true
+  "git.detectSubmodules": true,
+  "git.allowUnsafeRepositories": true,
+  "git.pollInterval": 1000,
+  "git.autoRefresh": true
 }
