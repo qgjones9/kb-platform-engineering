@@ -1,0 +1,19 @@
+{
+  "git.enabled": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autoRepositoryDetection": true,
+  "git.detectSubmodules": true,
+  "git.ignoreLimitWarning": true,
+  "git.path": null,
+  "git.scanRepositories": ["."],
+  "git.useEditorAsCommitInput": false,
+  "git.verboseCommit": false,
+  "git.pollInterval": 1000,
+  "git.autoRefresh": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": false,
+    "**/.git/subtree-cache/**": false
+  }
+}

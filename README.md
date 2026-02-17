@@ -1,33 +1,82 @@
-## kb-mathematics: A Digital Repository for Mathematical Knowledge
+# kb-platform-engineering: A Digital Repository for Platform Engineering Knowledge
 
-This repository serves as a centralized, version-controlled environment for documenting mathematical concepts, proofs, and formulas. It is designed to transform static notes into a searchable and collaborative knowledge base, utilizing Markdown and LaTeX for high-fidelity technical rendering.
+This repository serves as a centralized, version-controlled environment for documenting platform engineering tools, concepts, and best practices. It is designed to transform static notes into a searchable and collaborative knowledge base, utilizing Markdown for technical documentation and MkDocs for beautiful, accessible documentation sites.
 
-# Core Components and Features
+## Core Components and Features
 
-* **Categorized Knowledge Modules**
-The repository is organized by mathematical branches, such as Linear Algebra, Calculus, and Number Theory. Each directory contains detailed explanations of core theorems and their practical applications.
-* **Proof Documentation**
-A dedicated section for formal proofs allows contributors to track the logical progression of complex mathematical arguments. By using Git history, users can see how a specific derivation or proof has evolved or been refined over time.
-* **Resource Library and Reference Links**
-Beyond original notes, the repository includes a curated list of external resources, including academic papers, interactive visualizations, and problem sets to provide a comprehensive learning path.
-* **Standardized LaTeX Integration**
-All mathematical notation is standardized using LaTeX to ensure clarity and professional formatting across different devices. This allows for the clean rendering of complex expressions, such as the general form of a second-order linear homogeneous differential equation:
+- **Categorized Knowledge Modules**
+  The repository is organized by platform engineering domains, such as Container Runtime & Orchestration, Service Mesh & Networking, Observability & Monitoring, CI/CD & GitOps, Security, and more. Each directory contains detailed explanations of tools, their use cases, and practical applications.
 
+- **Tool Documentation**
+  A comprehensive collection of platform engineering tools with documentation covering installation, configuration, usage patterns, and integration strategies. By using Git history, users can track how tool configurations and best practices evolve over time.
 
+- **Resource Library and Reference Links**
+  Beyond original notes, the repository includes curated external resources, including official documentation, tutorials, and community best practices to provide a comprehensive learning path.
 
-# Using mkdocs to view documentation
+- **Standardized Documentation Format**
+  All documentation follows consistent Markdown formatting to ensure clarity and professional presentation across different devices and platforms.
 
-## Getting Started with MkDocs
+## Knowledge Base Structure
+
+The documentation is organized into the following categories:
+
+### API and Communication
+
+- REST, GraphQL, OpenAPI, WebSocket, Webhooks, gRPC
+
+### Authentication and Authorization
+
+- OAuth, OpenID Connect, JSON Web Token, Basic/Digest/Bearer Authentication, Mutual TLS, Keycloak
+
+### Autoscaling
+
+- Keda (Kubernetes Event-Driven Autoscaling)
+
+### CI/CD and GitOps
+
+- ArgoCD, Flux, GitLab, Helm, Renovate, SonarQube, Cypress
+
+### Container Registry
+
+- Harbor
+
+### Container Runtime and Orchestration
+
+- Docker, containerd, CRI-O
+
+### Observability and Monitoring
+
+- Prometheus, Grafana (with Promtail and Loki), Jaeger, Kiali, Thanos, Kubecost, Superset, Metrics Server
+
+### Platform Engineering and Developer Experience
+
+- Backstage, Platform One, Operator Framework
+
+### Security
+
+- Kyverno, Cosign, Fortify
+
+### Service Mesh and Networking
+
+- Istio, Envoy, Cilium, CoreDNS, kube-proxy, NGINX
+
+### Storage and Data
+
+- Velero, etcd, MongoDB, MinIO
+
+## Using MkDocs to View Documentation
+
+### Getting Started with MkDocs
 
 Content below is from the [MkDocs Installation guide](https://www.mkdocs.org/user-guide/installation/).
 
 ---
 
-# MkDocs Installation
+## MkDocs Installation
 
 A detailed guide.
 
-## Requirements
+### Requirements
 
 MkDocs requires a recent version of [Python](https://www.python.org/) and the Python package manager, [pip](https://pip.readthedocs.io/en/stable/installing/), to be installed on your system.
 
@@ -46,7 +95,7 @@ If you already have those packages installed, you may skip down to [Installing M
 
 Install [Python](https://www.python.org/) using your package manager of choice, or by downloading an installer appropriate for your system from [python.org](https://www.python.org/downloads/) and running it.
 
-> **Note:** If you are installing Python on Windows, be sure to check the box to have Python added to your PATH if the installer offers such an option (it's normally off by default). *Add Python to PATH*
+> **Note:** If you are installing Python on Windows, be sure to check the box to have Python added to your PATH if the installer offers such an option (it's normally off by default). _Add Python to PATH_
 
 ### Installing pip
 
@@ -94,5 +143,23 @@ mkdocs, version 1.2.0 from /usr/local/lib/python3.8/site-packages/mkdocs (Python
 > ```
 >
 > For a more permanent solution, you may need to edit your `PATH` environment variable to include the `Scripts` directory of your Python installation. Recent versions of Python include a script to do this for you. Navigate to your Python installation directory (for example `C:\Python38\`), open the `Tools`, then `Scripts` folder, and run the `win_add2path.py` file by double clicking on it. Alternatively, you can download the [script](https://github.com/python/cpython/blob/master/Tools/scripts/win_add2path.py) and run it (`python win_add2path.py`).
+
+## Running the Documentation Site
+
+Once MkDocs is installed, you can serve the documentation locally:
+
+```bash
+mkdocs serve
+```
+
+This will start a local development server at `http://127.0.0.1:8000` where you can view the documentation in your browser.
+
+To build the documentation site:
+
+```bash
+mkdocs build
+```
+
+This creates a `site` directory containing the static HTML files for the documentation.
 
 ---
