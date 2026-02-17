@@ -1,0 +1,11 @@
+Container Runtime and Orchestration
+Service Mesh and Networking
+Security
+Observability and Monitoring
+CI/CD and GitOps
+Platform Engineering and Developer Experience
+Container Registry
+Authentication and Authorization
+Auto-scaling
+Storage and Data
+API and Communication

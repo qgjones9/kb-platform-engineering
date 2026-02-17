@@ -1,0 +1,747 @@
+# Configuration file for MkDocs
+# Introduction:
+# https://www.mkdocs.org/user-guide/configuration/#introduction
+# https://squidfunk.github.io/mkdocs-material/setup/
+#
+# Project settings are configured by default using a YAML configuration file in
+# the project directory named mkdocs.yml. You can specify another path
+# for it by using the -f/--config-file option (see mkdocs build --help).
+#
+# -----------------------------------------------------------------------------
+# Project information
+# -----------------------------------------------------------------------------
+#
+# site_name: https://www.mkdocs.org/user-guide/configuration/#site_name
+# -----------------------------------------------------------------------------
+# description: This is a required setting, and should be a string that
+#   is used as the main title of the project documentation. When
+#   rendering the theme this setting will be passed as the site_name
+#   context variable.#   description
+#
+# default: required
+#   At a minimum, this configuration file must contain the site_name.
+#   All other settings are optional.
+#   site_name: "My Project Documentation"
+# -----------------------------------------------------------------------------
+site_name: Platform Engineering Knowledge Base
+# -----------------------------------------------------------------------------
+# site_url: see https://www.mkdocs.org/user-guide/config2uration/#site_url
+# -----------------------------------------------------------------------------
+site_url: "http://localhost:8000"
+# -----------------------------------------------------------------------------
+# dev_addr: https://www.mkdocs.org/user-guide/configuration/#dev_addr
+# -----------------------------------------------------------------------------
+dev_addr: "127.0.0.1:9052"
+#
+# description: Set the canonical URL of the site. This will add a link
+#   tag with the canonical URL to the head section of each HTML page.
+#   If the 'root' of the MkDocs site will be within a subdirectory of a
+#   domain, be sure to
+#   include that subdirectory in the setting (https://example.com/foo/).
+#   This setting is also used for mkdocs serve: the server will be mounted onto
+#   a path taken from the path component of the URL, e.g. some/page.md
+#   will be served from http://127.0.0.1:8000/foo/some/page/ to mimic the
+#   expected remote layout.
+#
+# default: null
+#
+# -----------------------------------------------------------------------------
+# repo_url: see https://www.mkdocs.org/user-guide/configuration/#repo_url
+# -----------------------------------------------------------------------------
+# repo_url: ""
+#
+# description: When set, provides a link to your repository (GitHub, Bitbucket,
+#   GitLab, ...) on each page.
+#
+# default: null
+# -----------------------------------------------------------------------------
+# repo_name: see https://www.mkdocs.org/user-guide/configuration/#repo_name
+# -----------------------------------------------------------------------------
+# repo_name: ""
+#
+# description: When set, provides a link to your repository (GitHub, GitLab) on
+#   each page.
+#
+# default: 'GitHub', 'Bitbucket' or 'GitLab' if the repo_url matches those
+#   domains, otherwise the hostname from the repo_url.
+# -----------------------------------------------------------------------------
+# edit_uri: see https://www.mkdocs.org/user-guide/configuration/#edit_uri
+# -----------------------------------------------------------------------------
+# edit_uri: ""
+#
+#
+# description: The path from the base repo_url to the docs directory when
+#   directly viewing a page, accounting for specifics of the repository host
+#   (e.g. GitHub, Bitbucket, etc), the branch, and the docs directory itself.
+#   MkDocs concatenates repo_url and edit_uri, and appends the input path
+#   of the page.
+#
+#   When set, and if your theme supports it, provides a link directly
+#   to the page in your source repository. This makes it easier to find
+#   and edit the source for the page. If repo_url is not set, this
+#   option is ignored. On some themes, setting this option may cause an
+#   edit link to be used in place
+#   of a repository link. Other themes may show both links.
+#
+#   The edit_uri supports query ('?') and fragment ('#') characters.
+#   For repository hosts that use a query or a fragment to access the files,
+#   the edit_uri might be set as follows. (Note the ? and # in the URI...)
+#
+#   Query string example:
+#   edit_uri: '?query=root/path/docs/'
+#
+#   Hash fragment example:
+#   edit_uri: '#fragment=root/path/docs/'
+#
+#   For other repository hosts, simply specify the relative path to the docs
+#   directory for example.
+#   edit_uri: root/path/docs/
+#
+#   For example, having this config:
+#   repo_url: https://example.com/project/repo
+#   edit_uri: blob/main/docs/
+#   means that a page named 'foo/bar.md' will have its edit link lead to:
+#   https://example.com/project/repo/blob/main/docs/foo/bar.md
+#
+#   edit_uri can actually be just an absolute URL, not necessarily relative to
+#   repo_url, so this can achieve the same result:
+#   edit_uri: https://example.com/project/repo/blob/main/docs/
+#
+#   For more flexibility, see edit_uri_template below.
+#   https://www.mkdocs.org/user-guide/configuration/#edit_uri_template
+#
+# default: edit/master/docs/ for GitHub and GitLab repos or src/default/docs/
+#   for a Bitbucket repo, if repo_url matches those domains, otherwise null
+
+# -----------------------------------------------------------------------------
+# edit_uri_template:
+# see https://www.mkdocs.org/user-guide/configuration/#edit_uri_template
+# -----------------------------------------------------------------------------
+# edit_uri_template: ""
+#
+# description:
+#  The more flexible variant of edit_uri. These two are equivalent:
+#   edit_uri: 'blob/main/docs/'
+#   edit_uri_template: 'blob/main/docs/{path}'
+#
+#   (they are also mutually exclusive -- don't specify both).
+#   Starting from here, you can change the positioning or formatting of the
+#   path, in case the default behavior of appending the path isn't enough.
+#
+#   The contents of edit_uri_template are normal Python format strings,
+#   with only
+#   these fields available:
+#   {path}, e.g. foo/bar.md
+#   {path_noext}, e.g. foo/bar
+#
+#   And the conversion flag !q is available, to percent-encode the field:
+#   {path!q}, e.g. foo%2Fbar.md
+#  Suggestion useful configurations:
+#    Github Wiki:
+#      (e.g. https://github.com/project/repo/wiki/foo/bar/_edit)
+#      repo_url: "https://github.com/project/repo/wiki"
+#      edit_uri_template: "{path_noext}_edit"
+#
+# default: null
+# -----------------------------------------------------------------------------
+# site_description:
+# see https://www.mkdocs.org/user-guide/configuration/#site_description
+# -----------------------------------------------------------------------------
+# site_description: ""
+#
+# description: Set the site description. This will add a meta tag to the
+#   generated HTML header.
+#
+# default: null
+# -----------------------------------------------------------------------------
+# site_author: https://www.mkdocs.org/user-guide/configuration/#site_author
+# -----------------------------------------------------------------------------
+# site_author: ""
+#
+# description: Set the site author. This will add a meta tag to the
+#   generated HTML header.
+#
+# default: null
+# -----------------------------------------------------------------------------
+# copyright: https://www.mkdocs.org/user-guide/configuration/#copyright
+# -----------------------------------------------------------------------------
+# copyright: ""
+#
+# description: Set the copyright information to be included in the documentation
+#   by the theme.
+#
+# default: null
+# -----------------------------------------------------------------------------
+# remote_branch: https://www.mkdocs.org/user-guide/configuration/#remote_branch
+# -----------------------------------------------------------------------------
+# remote_branch: ""
+#
+# description: Set the remote branch to commit to when using gh-deploy to deploy
+#   to GitHub Pages. This option can be overridden by a command line option in
+#   gh-deploy.
+#
+# default: gh-pages
+# -----------------------------------------------------------------------------
+# remote_name: https://www.mkdocs.org/user-guide/configuration/#remote_name
+# -----------------------------------------------------------------------------
+# remote_name: ""
+#
+# description: Set the remote name to commit to when using gh-deploy to deploy
+#   to GitHub Pages. This option can be overridden by a command line option in
+#   gh-deploy.
+#
+# default: origin
+# -----------------------------------------------------------------------------
+# DOCUMENTATION LAYOUT:
+# see https://www.mkdocs.org/user-guide/configuration/#documentation-layout
+# -----------------------------------------------------------------------------
+# nav: https://www.mkdocs.org/user-guide/configuration/#nav
+# -----------------------------------------------------------------------------
+# description:
+#   This setting is used to determine the format and layout of the global
+#   navigation for the site. A minimal navigation configuration could look like
+#   this:
+#
+#   nav:
+#     - index.md
+#     - about.md
+#     - contact.md
+#
+#   All paths in the navigation configuration must be relative to the docs_dir
+#   configuration option.
+#   see: https://www.mkdocs.org/user-guide/configuration/#docs_dir
+#
+#   See the section on configuring pages and navigation for a more detailed
+#   breakdown, including how to create sub-sections.
+#   https://www.mkdocs.org/user-guide/writing-your-docs/
+#   #configure-pages-and-navigation
+#
+#   Navigation items may also include links to external sites. While titles are
+#   optional for internal links, they are required for external links. An
+#   external link may be a full URL or a relative URL. Any path which is not
+#   found in the files is assumed to be an external link. See the section about
+#   Meta-Data on how MkDocs determines the page title of a document.
+#
+#   see: https://www.mkdocs.org/user-guide/writing-your-docs/#meta-data
+#
+#  nav:
+#    - Introduction: 'index.md'
+#    - 'about.md'
+#    - 'Issue Tracker': 'https://example.com/'
+#
+#  In the above example, the first two items point to local files while the
+#  third points to an external site.
+#
+#  However, sometimes the MkDocs site is hosted in a subdirectory of a project's
+#  site and you may want to link to other parts of the same site without
+#  including the full domain. In that case, you may use an appropriate relative
+#  URL.
+#
+#  site_url: https://example.com/foo/
+#
+#  nav:
+#    - Home: '../'
+#    - 'User Guide': 'user-guide.md'
+#    - 'Bug Tracker': '/bugs/'
+#
+#  In the above example, two different styles of external links are used.
+#  First, note that the site_url indicates the MkDocs site is hosted in the
+#  /foo/ subdirectory of the domain. Therefore, the Home navigation item is a
+#  relative link that moves up one level to the server root and effectively
+#  points to https://example.com/. The Bug Tracker item uses an absolute path
+#  from the server root and points to https://example.com/bugs/. Of course, the
+#  User Guide points to a local MkDocs page.
+#
+# default: By default nav will contain an alphanumerically sorted, nested list
+#   of all the Markdown files found within the docs_dir and its sub-directories.
+#   Index files will always be listed first within a sub-section.
+# -----------------------------------------------------------------------------
+nav:
+  - Platform:
+      - Platform Engineering: platform-engineering/index.md
+      - API and Communication:
+          - API and Communication: platform-engineering/api-and-communication/index.md
+          - REST: platform-engineering/api-and-communication/rest/index.md
+          - GraphQL: platform-engineering/api-and-communication/graphql/index.md
+          - OpenAPI: platform-engineering/api-and-communication/openapi/index.md
+          - WebSocket: platform-engineering/api-and-communication/websocket/index.md
+          - Webhooks: platform-engineering/api-and-communication/webhooks/index.md
+          - gRPC: platform-engineering/api-and-communication/grpc/index.md
+      - Authentication and Authorization:
+          - Authentication and Authorization: platform-engineering/authentication-and-authorization/index.md
+          - OAuth: platform-engineering/authentication-and-authorization/oauth/index.md
+          - OpenID Connect: platform-engineering/authentication-and-authorization/openid-connect/index.md
+          - JSON Web Token: platform-engineering/authentication-and-authorization/json-web-token/index.md
+          - Basic Authentication: platform-engineering/authentication-and-authorization/basic-authentication/index.md
+          - Digest Authentication: platform-engineering/authentication-and-authorization/digest-authentication/index.md
+          - Bearer Authentication: platform-engineering/authentication-and-authorization/bearer-authentication/index.md
+          - Mutual TLS: platform-engineering/authentication-and-authorization/mutual-tls/index.md
+          - Keycloak: platform-engineering/authentication-and-authorization/keycloak/index.md
+      - Autoscaling:
+          - Autoscaling: platform-engineering/autoscaling/index.md
+          - Keda: platform-engineering/autoscaling/keda/index.md
+      - CI/CD:
+          - CI/CD: platform-engineering/cicd-and-gitops/index.md
+          - ArgoCD: platform-engineering/cicd-and-gitops/argocd/index.md
+          - Cypress: platform-engineering/cicd-and-gitops/cypress/index.md
+          - Flux: platform-engineering/cicd-and-gitops/flux/index.md
+          - GitLab: platform-engineering/cicd-and-gitops/gitlab/index.md
+          - Helm: platform-engineering/cicd-and-gitops/helm/index.md
+          - Renovate: platform-engineering/cicd-and-gitops/renovate/index.md
+          - SonarQube: platform-engineering/cicd-and-gitops/sonarqube/index.md
+      - Container Registry:
+          - Container Registry: platform-engineering/container-registry/index.md
+          - Harbor: platform-engineering/container-registry/harbor/index.md
+      - Container Runtime and Orchestration:
+          - Container Runtime and Orchestration: platform-engineering/container-runtime-and-orchestration/index.md
+          - CRI-O: platform-engineering/container-runtime-and-orchestration/crio/index.md
+          - containerd: platform-engineering/container-runtime-and-orchestration/containerd/index.md
+          - Docker: platform-engineering/container-runtime-and-orchestration/docker/index.md
+      - Observability and Monitoring:
+          - Observability and Monitoring: platform-engineering/observability-and-monitoring/index.md
+          - Prometheus: platform-engineering/observability-and-monitoring/prometheus/index.md
+          - Grafana: platform-engineering/observability-and-monitoring/grafana/index.md
+          - Promtail: platform-engineering/observability-and-monitoring/grafana/promtail/index.md
+          - Grafana Loki: platform-engineering/observability-and-monitoring/grafana/loki/index.md
+          - Jaeger: platform-engineering/observability-and-monitoring/jaeger/index.md
+          - Kiali: platform-engineering/observability-and-monitoring/kiali/index.md
+          - Thanos: platform-engineering/observability-and-monitoring/thanos/index.md
+          - Kubecost: platform-engineering/observability-and-monitoring/kubecost/index.md
+          - Superset: platform-engineering/observability-and-monitoring/superset/index.md
+          - Metrics Server: platform-engineering/observability-and-monitoring/metrics-server/index.md
+      - Platform Engineering and Developer Experience:
+          - Platform Engineering and Developer Experience: platform-engineering/platform-engineering-and-developer-experience/index.md
+          - Backstage: platform-engineering/platform-engineering-and-developer-experience/backstage/index.md
+          - Platform One: platform-engineering/platform-engineering-and-developer-experience/platform_one/index.md
+          - Operator Framework: platform-engineering/platform-engineering-and-developer-experience/operator_framework/index.md
+      - Security:
+          - Security: platform-engineering/security/index.md
+          - Kyverno: platform-engineering/security/kyverno/index.md
+          - Cosign: platform-engineering/security/cosign/index.md
+          - Fortify: platform-engineering/security/fortify/index.md
+      - Service Mesh and Networking:
+          - Service Mesh and Networking: platform-engineering/service-mesh-and-networking/index.md
+          - Istio: platform-engineering/service-mesh-and-networking/istio/index.md
+          - Envoy: platform-engineering/service-mesh-and-networking/envoy/index.md
+          - Cilium: platform-engineering/service-mesh-and-networking/cilium/index.md
+          - CoreDNS: platform-engineering/service-mesh-and-networking/coredns/index.md
+          - kube-proxy: platform-engineering/service-mesh-and-networking/kube-proxy/index.md
+          - NGINX: platform-engineering/service-mesh-and-networking/nginx/index.md
+      - Storage and Data:
+          - Storage and Data: platform-engineering/storage-and-data/index.md
+          - Velero: platform-engineering/storage-and-data/velero/index.md
+          - etcd: platform-engineering/storage-and-data/etcd/index.md
+          - MongoDB: platform-engineering/storage-and-data/mongodb/index.md
+          - MinIO: platform-engineering/storage-and-data/mini-io/index.md
+
+# -----------------------------------------------------------------------------
+#  exclude_docs: https://www.mkdocs.org/user-guide/configuration/#exclude_docs
+# -----------------------------------------------------------------------------
+#   verions 1.5+
+#
+#   Changed in version 1.6:
+#   This config no longer applies the "drafts" functionality for mkdocs serve.
+#   If you have draft documents that you want available in "serve" and
+#   not "build",
+#   replace exclude_docs with the new draft_docs config option.
+#
+#   This config defines patterns of files (under docs_dir) to not be picked up
+#   into the built site.
+#
+#     exclude_docs: |
+#       api-config.json    # A file with this name anywhere.
+#       /requirements.txt  # Top-level "docs/requirements.txt".
+#       *.py               # Any file with this extension anywhere.
+#       !/foo/example.py   # But keep this particular file.
+#
+#   This follows the .gitignore pattern format.
+#   see: https://git-scm.com/docs/gitignore#_pattern_format
+#   The following defaults are always implicitly prepended - to exclude
+#   dot-files (and directories) as well as the top-level templates directory:
+#
+#     exclude_docs: |
+#       .*
+#       /templates/
+#
+#   So, in order to really start this config fresh, you'd need to specify a
+#   negated version of these entries first.
+#   Otherwise you could for example opt only certain dot-files back into the
+#   site:
+#     exclude_docs: |
+#       !.assets  # Don't exclude '.assets' although all other '.*' are excluded
+#
+#   default: null
+# -----------------------------------------------------------------------------
+# draft_docs: https://www.mkdocs.org/user-guide/configuration/#draft_docs
+# -----------------------------------------------------------------------------
+#   verions 1.6+
+#
+# Description:
+#   This config defines patterns of files (under docs_dir) to be treated as a
+#   draft. Draft files are available during mkdocs serve and include a "DRAFT"
+#   mark but will not be included in the build. To prevent this effect and make
+#   "serve" behave the same as "build", you can run mkdocs serve --clean.
+#
+#  Example:
+#
+#    draft_docs: |
+#      drafts/               # A "drafts" directory anywhere.
+#      _unpublished.md       # A md file ending in _unpublished.md
+#      !/foo_unpublished.md  # But keep this particular file.
+#
+#   default: null
+# -----------------------------------------------------------------------------
+# not_in_nav: see https://www.mkdocs.org/user-guide/configuration/#not_in_nav
+# -----------------------------------------------------------------------------
+#   verions 1.5+
+#
+#   Changed in version 1.6:
+#      the nav config is not specified at all, pages specified in this config
+#      will now be excluded from the inferred navigation.
+#
+#   If you want to include some docs into the site but intentionally exclude
+#   them from the nav, normally MkDocs warns about this.
+#
+#   Adding such patterns of files (relative to docs_dir) into the not_in_nav
+#   config will prevent such warnings.
+#
+#   Example:
+#
+#   nav:
+#     - Foo: foo.md
+#     - Bar: bar.md
+#
+#   not_in_nav: |
+#     /private.md
+#
+#   As the previous option, this follows the .gitignore pattern format.
+#
+#   default: null
+not_in_nav: |
+  mathematics/pre-algebra/1/whole-numbers/chapter-review/
+  mathematics/pre-algebra/1/whole-numbers/exercises/
+  mathematics/pre-algebra/2/content/
+# -----------------------------------------------------------------------------
+# validation: see https://www.mkdocs.org/user-guide/configuration/#validation
+# -----------------------------------------------------------------------------
+#
+# Configure the strictness of MkDocs' diagnostic messages when
+# validating links to documents.
+#
+# This is a tree of configs, and for each one the value can be one of the
+# three: warn, info, ignore. Which cause a logging message of the
+# corresponding severity to be produced. The warn level is, of course,
+# intended for use with mkdocs build --strict (where it becomes an
+# error), which you can employ in continuous testing.
+#
+# The config validation.links.absolute_links additionally has a special
+# value relative_to_docs, for validation of absolute links.
+#
+# see:
+# https://www.mkdocs.org/user-guide/configuration/#validation-of-absolute-links
+#
+#
+# defaults of this config as of version 1.6:
+#
+#   validation:
+#     nav:
+#       omitted_files: info
+#       not_found: warn
+#       absolute_links: info
+#     links:
+#       not_found: warn
+#       anchors: info
+#       absolute_links: info
+#       unrecognized_links: info
+#
+# (Note: you shouldn't copy this whole example, because it only
+# duplicates the defaults. Only individual items that differ should be
+# set.)
+#
+# Recommended values for most sites:
+#
+#   validation:
+#     omitted_files: warn
+#     absolute_links: warn  # Or 'relative_to_docs' - new in MkDocs 1.6
+#     unrecognized_links: warn
+#     anchors: warn  # New in MkDocs 1.6
+#
+# Full list of values and examples of log messages that they can hide or
+# make more prominent:
+#
+#   validation.nav.omitted_files
+#     The following pages exist in the docs directory, but are not
+#     included in the "nav" configuration: ...
+#
+#   validation.nav.not_found
+#     A reference to 'foo/bar.md' is included in the 'nav' configuration,
+#     which is not found in the documentation files.
+#
+#     A reference to 'foo/bar.md' is included in the 'nav' configuration,
+#     but this file is excluded from the built site.
+#
+#   validation.nav.absolute_links
+#     An absolute path to '/foo/bar.html' is included in the 'nav'
+#     configuration, which presumably points to an external resource.
+#
+#   validation.links.not_found
+#     Doc file 'example.md' contains a link '../foo/bar.md', but the
+#     target is not found among documentation files.
+#
+#     Doc file 'example.md' contains a link to 'foo/bar.md' which is
+#     excluded from the built site.
+#
+#   validation.links.anchors
+#     Doc file 'example.md' contains a link '../foo/bar.md#some-heading',
+#     but the doc 'foo/bar.md' does not contain an anchor '#some-heading'.
+#
+#     Doc file 'example.md' contains a link '#some-heading', but there is
+#     no such anchor on this page.
+#
+#   validation.links.absolute_links
+#     Doc file 'example.md' contains an absolute link '/foo/bar.html',
+#     it was left as is. Did you mean 'foo/bar.md'?
+#
+#   validation.links.unrecognized_links
+#     Doc file 'example.md' contains an unrecognized relative link
+#     '../foo/bar/', it was left as is. Did you mean 'foo/bar.md'?
+#    Doc file 'example.md' contains an unrecognized relative link
+#    'mail@example.com', it was left as is. Did you mean
+#    'mailto:mail@example.com'?
+# -----------------------------------------------------------------------------
+# validate abosolue links
+# -----------------------------------------------------------------------------
+# Historically, within Markdown, MkDocs only recognized relative links that
+# lead to another physical *.md document (or media file). This is a good
+# convention to follow because then the source pages are also freely browsable
+# without MkDocs, for example on GitHub. Whereas absolute links were left
+# unmodified (making them often not work as expected) or, more recently,
+# warned against. If you dislike having to always use relative links, now you
+# can opt into absolute links and have them work correctly.
+
+# If you set the setting validation.links.absolute_links to the new value
+# relative_to_docs, all Markdown links starting with / will be understood as
+# being relative to the docs_dir root. The links will then be validated for
+# correctness according to all the other rules that were already working for
+# relative links in prior versions of MkDocs. For the HTML output, these links
+# will still be turned relative so that the site still works reliably.
+
+# So, now any document (e.g. "dir1/foo.md") can link to the document
+# "dir2/bar.md" as [link](/dir2/bar.md), in addition to the previously only
+# correct way [link](../dir2/bar.md).
+#
+# You have to enable the setting, though. The default is still to just skip the link.
+#
+#  validation:
+#    links:
+#      absolute_links: relative_to_docs
+#      anchors: warn
+#      unrecognized_links: warn
+# -----------------------------------------------------------------------------
+# BUILD DIRECTORIES
+# see https://www.mkdocs.org/user-guide/configuration/#build-directories
+# -----------------------------------------------------------------------------
+# theme: see https://www.mkdocs.org/user-guide/configuration/#theme
+# -----------------------------------------------------------------------------
+# Sets the theme and theme specific configuration of your documentation site.
+# May be either a string or a set of key/value pairs.
+#
+# If a string, it must be the string name of a known installed theme. For a
+# list of available themes visit Choosing Your Theme.
+# https://www.mkdocs.org/user-guide/choosing-your-theme/
+#
+# theme:
+#   name: mkdocs
+#   locale: en
+#   custom_dir: my_theme_customizations/
+#   static_templates:
+#     - sitemap.html
+#   include_sidebar: false
+#
+# If a set of key/value pairs, the following nested keys can be defined:
+#
+# name:
+#   see: https://www.mkdocs.org/user-guide/configuration/#name
+#   The string name of a known installed theme. For a list of available
+#   themes visit Choosing Your Theme.
+#   https://www.mkdocs.org/user-guide/choosing-your-theme/
+#
+# locale:
+#   see: https://www.mkdocs.org/user-guide/configuration/#locale
+#   A code representing the language of your site.
+#   See Localizing your theme for details.
+#   https://www.mkdocs.org/user-guide/localizing-your-theme/
+#   default: en
+#
+# custom_dir:
+#   see: https://www.mkdocs.org/user-guide/configuration/#custom_dir
+#   A directory containing a custom theme. This can either be a relative
+#   directory, in which case it is resolved relative to the directory containing
+#   your configuration file or it can be an absolute directory path from the root
+#   of your local file system.
+#   default: null
+#
+#   See Customizing Your Theme for details if you would like to tweak an
+#   existing theme.
+#   see: https://www.mkdocs.org/user-guide/customizing-your-theme/
+#
+#   See the Theme Developer Guide if you would like to build your own theme from
+#   the ground up.
+#   see: https://www.mkdocs.org/user-guide/theme-developer-guide/
+#
+# static_templates:
+#   see: https://www.mkdocs.org/user-guide/configuration/#static_templates
+#   A list of templates to render as static pages. The templates must be located
+#   in either the theme's template directory or in the custom_dir defined in the
+#   theme configuration.
+#
+# theme_specific_keywords:
+#   see: https://www.mkdocs.org/user-guide/configuration/#theme-specific-keywords
+#   A dictionary of theme specific keywords. This can be used to pass
+#   additional configuration to the theme.
+#   default: null
+#
+# default: mkdocs
+# -----------------------------------------------------------------------------
+theme:
+  name: material
+  palette:
+    # Default: dark (slate)
+    - scheme: slate
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    - navigation.instant
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-tracking
+    - navigation.tracking
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#section-index-pages
+    - navigation.indexes
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#expand-navigation
+    # - navigation.expand
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#tab-navigation
+    - navigation.tabs
+    - navigation.tabs.active
+    - navigation.tabs.sticky
+    - navigation.tabs.scrollable
+
+# -----------------------------------------------------------------------------
+# THEME OPTIONS
+# see https://www.mkdocs.org/user-guide/configuration/#theme-options
+# -----------------------------------------------------------------------------
+# theme_options:
+#   name: material
+#   palette:
+#     - dark
+#     - primary: teal
+#     - accent: orange
+# -----------------------------------------------------------------------------
+# docs_dir: https://www.mkdocs.org/user-guide/configuration/#docs_dir
+# -----------------------------------------------------------------------------
+# Sets the directory containing the documentation files.
+#
+# default: docs/
+# -----------------------------------------------------------------------------
+# site_dir: https://www.mkdocs.org/user-guide/configuration/#site_dir
+# -----------------------------------------------------------------------------
+# The directory containing the documentation source markdown files. This can
+# either be a relative directory, in which case it is resolved relative to the
+# directory containing your configuration file, or it can be an absolute
+# directory path from the root of your local file system.
+#
+# default: "docs"
+# -----------------------------------------------------------------------------
+# site_dir: https://www.mkdocs.org/user-guide/configuration/#site_dir
+# -----------------------------------------------------------------------------
+# The directory where the output HTML and other files are created. This can
+# either be a relative directory, in which case it is resolved relative to the
+# directory containing your configuration file, or it can be an absolute
+# directory path from the root of your local file system.
+#
+# default: "site"
+#
+# Note
+# If you are using source code control you will normally want to ensure that
+# your build output files are not committed into the repository, and only keep
+# the source files under version control. For example, if using git you might
+# add the following line to your .gitignore file:
+#
+# site/
+#
+# If you're using another source code control tool, you'll want to check its
+# documentation on how to ignore specific directories.
+# -----------------------------------------------------------------------------
+# extra_css: https://www.mkdocs.org/user-guide/configuration/#extra_css
+# -----------------------------------------------------------------------------
+# Set a list of CSS files (relative to docs_dir) to be included by the theme,
+# typically as <link> tags.
+extra_css:
+  - stylesheets/extra.css
+# -----------------------------------------------------------------------------
+# extra_javascript:
+# see https://www.mkdocs.org/user-guide/configuration/#extra_javascript
+# -----------------------------------------------------------------------------
+# Set a list of JavaScript files in your docs_dir to be included by the theme,
+# as <script> tags.
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+# -----------------------------------------------------------------------------
+# extra_templates:
+# see https://www.mkdocs.org/user-guide/configuration/#extra_templates
+# Set a list of templates in your docs_dir to be included by the theme, as
+# <template> tags.
+# -----------------------------------------------------------------------------
+# extra:
+# see https://www.mkdocs.org/user-guide/configuration/#extra
+# -----------------------------------------------------------------------------
+# A set of key-value pairs, where the values can be any valid YAML construct,
+# that will be passed to the template. This allows for great flexibility when
+# creating custom themes.
+# -----------------------------------------------------------------------------
+# Preview controls
+# https://www.mkdocs.org/user-guide/configuration/#preview-controls
+# -----------------------------------------------------------------------------
+# Live reloading
+# -----------------------------------------------------------------------------
+# watch: https://www.mkdocs.org/user-guide/configuration/#watch
+# Additional directories to watch (paths relative to this config file).
+# docs_dir (docs) and the config file are already watched by default.
+# Use this only for extra dirs (e.g. theme overlay, extra assets).
+# On WSL, live reload may not fire when saving from Windows/Cursor;
+# see https://github.com/mkdocs/mkdocs/discussions/2437
+# -----------------------------------------------------------------------------
+watch:
+  - docs
+# alternatively can pass command line argument --livereload
+# -----------------------------------------------------------------------------
+# strict: https://www.mkdocs.org/user-guide/configuration/#strict
+# -----------------------------------------------------------------------------
+# strict: true
+# -----------------------------------------------------------------------------
+# dev_addr: https://www.mkdocs.org/user-guide/configuration/#dev_addr
+# -----------------------------------------------------------------------------
+# The address to bind to for the development server.
+# default: localhost:8000
+# -----------------------------------------------------------------------------
+# see: https://squidfunk.github.io/mkdocs-material/reference/formatting/
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
